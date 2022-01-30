@@ -1,0 +1,46 @@
+﻿@model aplikacija1.Models.PopisRecepata
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalji recepta</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal" style="font-size:medium">
+        <dt>
+            Naziv recepta:
+            @*@Html.DisplayNameFor(model => model.Naziv)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naziv)
+        </dd>
+
+        <dt>
+            Sastojci:
+            @*@Html.DisplayNameFor(model => model.Sastojak)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sastojak) <br />
+            @Html.DisplayFor(model => model.Sastojak2)
+        </dd>
+
+        <dt>
+            Složenost recepta:
+            @*@Html.DisplayNameFor(model => model.Slozenost)*@
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slozenost)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Povratak na popis recepata", "Index")
+</p>

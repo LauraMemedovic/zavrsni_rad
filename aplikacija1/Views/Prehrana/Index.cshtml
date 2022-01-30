@@ -1,0 +1,101 @@
+﻿@model IEnumerable<aplikacija1.Models.Prehrana>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Informacije o prehrani</h2>
+
+
+<table class="table" style="font-size: medium; background-color: #adebad; padding: 5px; ">
+    <tr>
+        <td>
+            <h3 style="font-weight:bold">VODA</h3><br>
+            <p>
+                Hrana nam daje energiju koja nam je potrebna za održavanje života.
+                Ta se energija mjeri u kalorijama, baš kao što benzin gorivo u automobilu i održava ga u pokretu,
+                kalorije opskrbljuju naše tijelo gorivom, što znači da smo sposobni nastaviti razmišljati i kretati se.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight:bold">MLIJEČNI PROIZVODI</h3><br>
+            <p>
+                Kao što su: mlijeko, sir, jogurt
+                Opskrbljuju tijelo proteinima za rast i popravak, kao i kalcijem za jake kosti i zdrave zube.
+                Odaberite nezaslađene verzije s manje masnoća kad je to moguće i potražite pojačane verzije biljnih alternativa mliječnim proizvodima.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight: bold">ŠEĆER</h3><br>
+            <p>
+                Šećer je vrsta ugljikohidrata i sastojak koji se nalazi u različitim namirnicama. Samo po sebi, ima vrlo malu nutritivnu vrijednost,
+                ali važno je razumjeti različite vrste šećera i hranu u kojoj se nalaze.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3 style="font-weight:bold">SOL</h3><br>
+            <p>
+                Sol je jedan od najstarijih sastojaka i koristi se u cijelom svijetu za začinjavanje hrane.
+                Donosi okus u hranu, ali se koristi i za njegovo očuvanje. Sol je jedan od pet osnovnih okusa koje naš jezik može okusiti.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight:bold">DORUČAK</h3><br>
+            <p>
+                Često se kaže da je doručak najvažniji obrok u danu, a to je zato što su naša tijela bila bez hrane nekoliko sati dok spavamo.
+                Dobar, uravnotežen obrok započinje dan, vraća razinu energije i znači da je manja vjerojatnost da ćemo ujutro grickati prazne kalorije.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight:bold">VODA</h3><br>
+            <p>
+                Voda je bitan dio uravnotežene prehrane - održava nas hidriranom i budnom. Naš se mozak sastoji od približno 73% vode,
+                pa slaba hidratacija može utjecati na njegovo funkcioniranje.
+            </p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <h3 style="font-weight:bold">PROTEINI</h3><br>
+            <p>
+                Kao što su: grah, riba, jaja, meso, orasi, tofu
+                Pomaže u rastu i oporavku mišića. Mijenjajte proteine i uključite vegetarijanske izvore. S mesnim proteinima odaberite
+                nemasne komade gdje možete i ograničite unos prerađenog mesa.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight:bold">TJELOVJEŽBA</h3><br>
+            <p>
+                Održavanje aktivnosti iznimno je važno za dobro zdravlje. Ne samo da smanjuje rizik od zdravstvenih problema poput bolesti srca,
+                moždanog udara, dijabetesa tipa 2, raka, osteoporoze i demencije; poznato je i da povećava samopouzdanje,
+                raspoloženje i energiju te nam pomaže da bolje spavamo.
+            </p>
+        </td>
+        <td>
+            <h3 style="font-weight:bold">UGLJIKOHIDRATI</h3><br>
+            <p>
+                Kao što su: kruh, tjestenina, riža, krumpir
+                Oni su glavni izvor energije tijela. Birajte integralne sorte gdje je moguće za održavanje probavnog zdravlja
+                i davanje više vlakana, vitamina i minerala.
+            </p>
+        </td>
+    </tr>
+
+    @*@foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Info)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+                </td>
+            </tr>
+        }*@
+
+</table>

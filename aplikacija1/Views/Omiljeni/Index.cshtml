@@ -1,0 +1,38 @@
+﻿@model IEnumerable<aplikacija1.Models.Omiljeni>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Omiljeni recepti i sastojci za kupovinu</h2>
+
+<p style="font-size:medium;">
+    @Html.ActionLink("Dodaj novi omiljeni recept i sastojak za kupovinu", "Create")
+</p>
+<table class="table" style="background-color: #adebad; padding: 5px; ">
+    <tr>
+        <th style="font-size:medium;">
+            Naziv recepta
+        </th>
+        <th style="font-size:medium;">
+            Naziv sastojka
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="font-size:medium;">
+            @Html.DisplayFor(modelItem => item.PopisRecepata.Naziv)
+        </td>
+        <td style="font-size:medium">
+            @Html.DisplayFor(modelItem => item.Sastojak.Naziv)
+        </td>
+        <td style="font-size:medium;">
+            @Html.ActionLink("Obriši s popisa", "Delete", new { id=item.OmiljeniID })
+        </td>
+    </tr>
+}
+
+</table>
+
+

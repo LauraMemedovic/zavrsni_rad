@@ -1,0 +1,42 @@
+﻿@model aplikacija1.Models.Omiljeni
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Brisanje</h2>
+
+<h3>Jeste li sigurni da želite ukloniti s popisa?</h3>
+<div>
+    @*<h4>Omiljeni</h4>*@
+    <hr />
+    <dl class="dl-horizontal">
+        <dt style="font-size:medium">
+            Naziv recepta:
+        </dt>
+
+        <dd style="font-size:medium">
+            @Html.DisplayFor(model => model.PopisRecepata.Naziv)
+        </dd>
+
+        <dt style="font-size:medium">
+            Naziv sastojka:
+        </dt>
+
+        <dd style="font-size:medium">
+            @Html.DisplayFor(model => model.Sastojak.Naziv)
+        </dd>
+
+    </dl>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Povratak na popis", "Index")
+        </div>
+    }
+</div>

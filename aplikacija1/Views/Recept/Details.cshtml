@@ -1,0 +1,344 @@
+﻿@model aplikacija1.Models.Recept
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Naziv)</h2>
+
+<div  style="background-color: #adebad; padding: 5px; ">
+    <table class="table">
+
+        @if (Model.Naziv == "Tjestenina s brokulom")
+        {
+            <img src="https://www.saltandlavender.com/wp-content/uploads/2021/03/creamy-broccoli-pasta-2-720x1080.jpg" style="width:380px;height:560px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>300 g integralne tjestenine</li>
+                <li>350 g cvjetova brokule</li>
+                <li>30 g svježih listova bosiljka</li>
+                <li>30 g parmezana</li>
+                <li>1/2 sitno nasjeckanog češnja češnjaka</li>
+                <li>3 žlice maslinovog ulja</li>
+                <li>1 žlica limunovog soka</li>
+                <li>Sol, papar</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Skuhajte tjesteninu prema uputama na pakiranju. <br>
+                U međuvremenu, brokulu skuhajte na pari, oko 6 minuta, odnosno dok ne omekša. <br>
+                Ubacite brokulu u blender, dodajte bosiljak, parmezan, češnjak, maslinovo ulje i limunov sok i sve skupa dobro izblendajte dok ne dobijete pesto. <br>
+                Probajte smjesu i ako treba, začinite ju dodatno sa soli, paprom. <br>
+                Ocijedite tjesteninu, stavite ju u posudu i preko nje prelijte dobiveni pesto od brokule. <br>
+                Sve dobro promiješajte da se okusi prožmu i poslužite uz parmezan.
+            </p>
+        }
+        @if (Model.Naziv == "Low carb krekeri")
+        {
+            <img src="https://realbalanced.com/wp-content/uploads/2018/01/Low-Carb-Crackers-11.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>60 g bademovog brašna</li>
+                <li>15 g kokosovog brašna</li>
+                <li>20 g psyllium ljuskica</li>
+                <li>120 ml tople vode</li>
+                <li>Sol</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Pećnicu zagrijte na 175 stupnjeva. <br>
+                U srednje velikoj posudi pomiješajte bademovo brašno, kokosovo brašno, psyllium i sol. Polako, uz stalno miješanje dodajte vodu
+                i izmiješajte dok ne dobijete jednoličnu smjesu. Oko minutu rukama mijesite smjesu dok ne postane mekana i elastična. <br>
+                Ako vam se smjesa čini presuhom dodajte pola žličice vode, a ako je prevlažna dodajte 1/2 žličice psylliuma. Smjesa bi trebala biti vlažna,
+                ali se ne bi smjela lijepiti za vaše dlanove. <br>
+                Sad smjesu stavite između dva papira za pečenje pa je izvaljajte dok ne dobijete debljinu od oko 1-1,5 cm. <br>
+                Maknite gornji papir za pečenje pa nožem ili rezačem za pizzu narežite kvadrataste krekere željene veličine. <br />
+                Na protvan stavite papir za pečenje i na njega krekere i pecite dok ne dobiju lijepu zlatno-smeđu boju, oko 20-25 minuta.
+                Nakon prvih 15-ak minuta pečenja provjeravajte ih svakih 5 minuta, da vam se ne prepeku. <br />
+                Kako se krekeri budu hladili, tako će postajati sve hrskaviji.
+            </p>
+        }
+        @if (Model.Naziv == "Smoothie od đumbira")
+        {
+            <img src="https://feedmephoebe.com/wp-content/uploads/2016/01/1B3A1871.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>Komadić korijena đumbira ili pola žličice đumbira u prahu</li>
+                <li>2 šake špinata</li>
+                <li>1 jabuka</li>
+                <li>1/2 ocijeđenog limuna</li>
+                <li>1/2 žličice brezinog šećera</li>
+                <li>1/3 svježeg krastavca</li>
+                <li>1 korijen celera</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Umjesto špinata, može se staviti i kelj ili blitva.<br />
+                Umjesto celera i krastavca, može svježa tikvica. <br>
+                Umjesto brezinog šećera, može žličica meda. <br />
+                Sve sastojke ubaciti u blender i miksati dok se ne dobije kašasti sok. <br />
+                Smoothie se može poslužiti kao doručak ili međuobrok.
+            </p>
+
+        }
+        @if (Model.Naziv == "Rižoto sa škampima")
+        {
+            <img src="https://previews.123rf.com/images/freeskyline/freeskyline1801/freeskyline180100185/93726852-shrimps-with-rice-and-peas-view-from-above-top-vertical.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>1 pakiranje zamrznutih očišćenih škampa</li>
+                <li>1 glavica luka</li>
+                <li>1 šalica riže</li>
+                <li>1 litra vode ili temeljca</li>
+                <li>100 ml bijelog vina</li>
+                <li>1 žličica maslaca</li>
+                <li>Sol, papar, peršin</li>
+                <li>Maslinovo ulje</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Glavicu luka narežite na što sitnije.<br />
+                U dubljoj tavi ili posudi zagrijte ulje pa dodajte na sitno nasjeckan luk. Uz stalno miješanje, dajte luku 2-3 minute da se zacakli,
+                ali pazite da ne izgori. Dodajte rižu pa uz stalno miješanje, dinstajte još 3-4 minute. <br>
+                Ulijte 250 ml temeljca, promiješajte i uz često miješanje pirjajte dok temeljac ne ispari. <br />
+                Potom ulijte vino pa ponovite isti postupak, dok vino ne ispari. <br />
+                Sad dodajte škampe i preostali temeljac, promiješajte i ostavite da se lagano kuha. Kad je riža pri kraju,
+                dodajte začine, promiješajte i ostavite da se kuha dok riža nije željene kuhanosti.<br />
+                Na kraju dodajte maslac i začine, promiješajte da se maslac otopi
+                pa maknite s ploče i ostavite 10-ak minuta da se preostala tekućina upije, a rižoto dobije lijepu aromu i strukturu.
+            </p>
+
+        }
+        @if (Model.Naziv == "Raffaello kuglice")
+        {
+            <img src="https://shedonistana.com/wp-content/uploads/2019/07/raffaello-1080x1620.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>1/2 limun</li>
+                <li>3 žlice maslaca od orašastih plodova po vašem izboru</li>
+                <li>1 žlica kokosovog ulja </li>
+                <li>2-3 žlice javorovog sirupa (ili drugog zaslađivača po vašem izboru) </li>
+                <li>50 g kokosovih mrvica + 20 g za valjanje kuglica</li>
+                <li>Korica limuna - po želji</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Iscijedite sok iz pola limuna što bi vam trebalo dati oko 2-3 žlice, ali ako želite možete dodati još.<br />
+                Pomiješajte limunov sok s maslacem, kokosovim uljem i javorovim sirupom. <br />
+                Po želji dodajte naribanu koricu limuna. <br>
+                Dodajte kokosove mrvice i miješajte dok ne dobijete smjesu nalik tijestu koju možete oblikovati u kuglice. <br />
+                Kuglice uvaljajte u kokos za valjanje i stavite u hladnjak na nekoliko sati ili preko noći. <br />
+            </p>
+
+        }
+        @if (Model.Naziv == "Pita od sira")
+        {
+            <img src="https://www.tportal.hr/media/thumbnail/w1000/12297.jpeg" style="width:380px;height:610px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>200 g zobenog brašna </li>
+                <li>50 g orašastih plodova</li>
+                <li>2 žličice praška za pecivo</li>
+                <li>3 žlice maslaca od kikirikija</li>
+                <li>ksilitol koji zamjenjuje 60 g šećera</li>
+                <li>1 korica limuna</li>
+                <li>3 jaja</li>
+                <li>Domaći pekmez od jagoda</li>
+                <li>500 g svježeg sira </li>
+                <li>200 g grčkog kremastog jogurta</li>
+                <li>Prstohvat soli</li>
+                <li>Ksilitol koji zamjenjuje 100 g šećera</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Pomiješajte zobeno brašno, mljevene bademe i prašak za pecivo. Dodajte sladilo i koricu neprskanog limuna. <br />
+                Ako koristite med, istucite ga sa žumanjcima pa ulijte u suhe sastojke. Umiješajte maslac i zamijesite tijesto.
+                Ako vam se učini suho, dodajte žlicu-dvije ledene vode. Zamotajte u prozirnu foliju i stavite u hladnjak. Zagrijte pećnicu na 180C. <br>
+                Izmiksajte bjelanjke i malo soli u snijeg. Sa strane izmiksajte svježi sir, jogurt i sladilo. Po želji dodajte limunov sok. Pomiješajte, 
+                ali tako da lagano lopaticom umiješajte snijeg u sir. Izvadite tijesto, malo više od pola razvaljajte
+                i stavite u namašćenu tepsiju ili tepsiju obloženu papirom za pečenje. Ispikajte vilicom i pecite 5 minuta. <br />
+                Izvadite iz pećnice, premažite domaćim pekmezom od jagoda. Nalijte smjesu od sira i na nju naribajte ostatak tijesta.
+                Malo pekmeza rasporedite i odozgo po tijestu. Pecite još 25-30 minuta.
+            </p>
+
+        }
+        @if (Model.Naziv == "Piletina s mozzarellom")
+        {
+            <img src="https://tornadoughalli.com/wp-content/uploads/2020/03/Cheesy-Chicken-13-of-21.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>Pileća prsa</li>
+                <li>125 g mozzarelle</li>
+                <li>1 naribana mozzarella</li>
+                <li>1 zelena paprika ili tikvica</li>
+                <li>1 rajčica</li>
+                <li>Maslinovo ulje</li>
+                <li>Sol i papar</li>
+                <li>Mediteranska mješavina začina</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Pileća prsa očistite i zarežite na nekoliko mjesta s gornje strane.<br />
+                Mozzarellu, rajčicu i papriku (ili tikvicu)  narežite na šnitice ili trakice. <br />
+                Mozzarellu stavite u svaki prorez, dok rajčicu i papriku stavljajte naizmjenično. <br>
+                Začinite i dodajte mediteransku mješavinu začina te prelijte s malo maslinovog ulja. <br />
+                Pospite i naribanom mozzarellom po želji. <br />
+                Pecite u zagrijanoj pećnici na 180 stupnjeva, 30 do 40 minuta, ovisno o veličini i debljini pilećih prsa. 
+            </p>
+
+        }
+        @if (Model.Naziv == "Zapečene punjene paprike")
+        {
+            <img src="https://storage.googleapis.com/gen-atmedia/3/2018/12/d0f225637c7bc8e014faf8e91b52341975c630aa.jpeg" style="width:380px;height:600px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>450 g nemasne mljevene junetine</li>
+                <li>280 g zamrznutih listića špinata</li>
+                <li>1 srednje velika tikvica</li>
+                <li>1 luk</li>
+                <li>Maslinovo ulje</li>
+                <li>75 g kus-kusa</li>
+                <li>1 jaje</li>
+                <li>Sol, papar</li>
+                <li>3 veće paprike</li>
+                <li>600 g sjeckanih rajčica iz konzerve</li>
+                <li>80 g mrvljenog feta sira</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Špinat ostavite da se odmrzne pa ga ocijedite. Tikvicu naribajte na krupniji ribež, a luk sitno nasjeckajte. Paprike prerežite na pola,
+                ostavljajući im zeleni stručak. Izvadite sve sjemenke i odrežite bijele dijelove iznutra.<br />
+                U dubljoj tavi ugrijte malo ulja, propirjajte luk dok se ne počne raspadati, a zatim popržite meso dok ne postane smećkasto,
+                oko 10 minuta. Dodati zatim ribane tikvice, kus kus i špinat te sve pirjati oko 10 minuta, podlijevajući u par navrata
+                s malo vode ako tekućine nestane. Začiniti solju, paprom, origanom, maknuti s vatre te ohladiti miješajući. 
+                Pećnicu ugrijati na 190°C. Jaje razmutiti u zdjelici, a kad se smjesa malo prohladila (da se jaje ne zgruša), umiješati ga u smjesu.
+                Tako pripremljenu smjesu napuniti u polovice paprika. <br />
+                U kalup za pečenje veličine staviti rajčice, poprskati s malo maslinovog ulja te posuti solju i paprom.
+                Preko svake paprike namrviti malo feta sira i parmezana. Peći oko 30-40 minuta.
+            </p>
+
+        }
+        @if (Model.Naziv == "Kokos čokoladne kocke")
+        {
+            <img src="https://thebigmansworld.com/wp-content/uploads/2017/06/healthy-no-bake-chocolate-coconut-brownies-paleo-vegan-glutenfree-7.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>75 g (1 šalica) kokosovog brašna </li>
+                <li>60 g (1 šalica) kakaa u prahu </li>
+                <li>1 mjerica whey proteina od čokolade </li>
+                <li>225 g (1 šalica) kikiriki maslaca</li>
+                <li>230 g (1 šalica) pirea od batata</li>
+                <li>80 g sirupa od agave </li>
+                <li>4-5 žlica zobenog ili bademovog mlijeka </li>
+                <li>80 g kokosovog čipsa, usitnjenog u blenderu</li>
+                <li>75 g kokosovog ulja </li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Za “brownie”sloj, u većoj posudi izmiksajte sljedeće sastojke: kokos brašno, kakao, whey protein od čokolade, kikiriki maslac,
+                kokosov sirup, pire od batata te zobeno mlijeko. Smjesa će biti vrlo gusta, a ukoliko je baš toliko gusta da se ne može izmiksati,
+                dodajte još malo zobenog mlijeka, po potrebi.<br />
+                Kad se smjesa povezala, raširite je u lim veličine 20x20 cm obložen papirom za pečenje. Poravnajte smjesu i stavite u hladnjak dok pripremate drugi sloj. <br>
+                Za “kokos” sloj, pomiješajte usitnjen tj. samljeven kokosov čips, otopljeno i prohlađeno kokosovo ulje te kokosov sirup. 
+                Sve rasporedite po prvom sloju te stavite u hladnjak na oko 2 sata. <br />
+                Nakon toga režite kolač na kocke i uživajte.<br />
+                *Pire od batata radimo tako da oguljeni narančasti batat sjeckan na kocke kuhamo u kipućoj vodi dok ne omekša. 
+                Zatim ga ocijedimo, kratko ohladimo i blendamo štapnim mikserom ili u kuhinjskom blenderu u pire.
+            </p>
+
+        }
+        @if (Model.Naziv == "Rolice od tikvica")
+        {
+            <img src="https://i.pinimg.com/736x/59/6b/fe/596bfefff7102944d724e35cada57dd2--zucchini-rolls-zuchinni-roll-ups.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>2 tikvice</li>
+                <li>Maslinovo ulje</li>
+                <li>Sol, papar</li>
+                <li>250 g posnog sira</li>
+                <li>100 g feta sira</li>
+                <li>6 komada sušenih rajčica</li>
+                <li>1 žlica kapara</li>
+                <li>1 češanj češnjaka</li>
+                <li>1-2 žlice sjeckanih oraha</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Tikvice operite pa ih pažljivo oštrim nožem narežite na tanke uzdužne ploške. 
+                Rasporedite ih po papiru za pečenje i lagano posolite. Pustite da stoje oko 10 minuta, a zatim osušite tj. pobrišite tekućinu 
+                koju su pustile papirnatim ubrusom. Premažite svaku plošku maslinovim uljem, pa začinite s još malo soli i papra.<br />
+                Zagrijte grill tavu i kratko prepecite tikvice, oko pola minute sa svake strane. Izvadite ih na tanjur i ostavite da se ohlade. <br>
+                Za to vrijeme u posudi pomiješajte posni sir, mrvljeni feta sir, sitno sjeckane sušene rajčice, kapare, natrgane listiće bosiljka i 
+                sitno sjeckani češnjak. Začinite solju i paprom, no pripazite na količinu soli jer je feta slana. Tikvice premažite dobivenom smjesom i zarolajte ih.
+            </p>
+
+        }
+        @if (Model.Naziv == "Domaći kruh s chia sjemenkama")
+        {
+            <img src="https://healthyfitnessmeals.com/wp-content/uploads/2020/07/whole-wheat-bread-1.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>8 jaja</li>
+                <li>3/4 šalice vode</li>
+                <li>1 šalica kefira</li>
+                <li>Sol, papar</li>
+                <li>1 i pol šalica chia sjemenki</li>
+                <li>4 šalice bademovog brašna</li>
+                <li>2 šalice ribanog cheddar sira</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Zagrijte pećnicu na 180 stupnjeva.<br />
+                U jednoj posudi povežite jaja, kefir, vodu, sol i papar pa u tu smjesu dodajte brašno, chia sjemenke i ribani sir.<br>
+                Sve skupa dobro promiješajte.<br />
+                Kalup za kruh premažite kokosovim uljem pa potom u njega ulijte smjesu.<br />
+                Pecite kruh 40-45 minuta.
+            </p>
+
+        }
+        @if (Model.Naziv == "Piletina punjena špinatom")
+        {
+            <img src="https://www.cookingforkeeps.com/wp-content/uploads/2020/01/Spinach-and-Feta-Stuffed-Chicken-7-1.jpg" style="width:380px;height:580px;margin-right:40px;float:left" />
+            <p style="font-weight:bold;font-size:large">Sastojci:</p>
+            <ul style="font-size:medium">
+                <li>2 veća pileća prsa, bez kože</li>
+                <li>1 žlica maslinovog ulja </li>
+                <li>30 g svježeg špinata, nasjeckanog na sitno</li>
+                <li>50 g krem sira</li>
+                <li>75 g cheddar sira, naribanog</li>
+                <li>75 g mozzarelle, naribane</li>
+                <li>1 žličica slatke začinske paprike</li>
+                <li>Sol, papar</li>
+            </ul>
+            <br />
+            <p style="font-weight:bold;font-size:large">Priprema: </p>
+            <p style="font-size:medium">
+                Zagrijte pećnicu na 200 stupnjeva, a na protvan stavite papir za pečenje.<br />
+                Pileća prsa prelijte maslinovim uljem. Svako prsa razrežite po tanjoj strani, tako da napravite otvor koji možete napuniti. <br>
+                U posudi pomiješajte nasjeckani špinat, kremasti sir, gaudu i mozzarellu. <br />
+                Žlicom ovom smjesom napunite pileća prsa. <br />
+                Meso potom začinite paprikom, soli i paprom pa stavite na papir za pečenje i stavite u pećnicu. <br />
+                Pecite 20-30 minuta.
+            </p>
+
+        }
+
+
+
+    </table>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Povratak na prikaz recepata", "Index")
+</p>

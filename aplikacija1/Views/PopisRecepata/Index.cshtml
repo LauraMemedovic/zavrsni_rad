@@ -1,0 +1,60 @@
+﻿@model IEnumerable<aplikacija1.Models.PopisRecepata>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Abecedni popis recepata </h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+
+@using (Html.BeginForm())
+{
+    <p style="font-size:medium">
+        Pronađi recepte po sastojku ili složenosti: @Html.TextBox("SearchString")  
+        <input type="submit" value="Search" />
+    </p>
+}
+
+<table class="table" style="font-size: medium; background-color: #adebad; padding: 5px; ">
+    <tr>
+        <th>
+            @Html.ActionLink("Naziv", "Index", new { sortOrder = ViewBag.NameSortParm })
+        </th>
+        @*<th>
+                <p style="font-weight:bold;">Naziv jela</p>
+            </th>*@
+        <th>
+            <p style="font-weight:bold;">Sastojci</p>
+        </th>
+        <th>
+            <p style="font-weight:bold;">Složenost</p>
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Naziv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sastojak) <br>
+                @Html.DisplayFor(modelItem => item.Sastojak2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slozenost)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.ID }) |*@ |
+                @Html.ActionLink("Detalji", "Details", new { id = item.ID }) |
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.ID }) |*@
+                @*@Html.ActionLink("Dodaj", "Dodaj", new { name = item.Naziv })*@
+            </td>
+        </tr>
+    }
+
+</table>

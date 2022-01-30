@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - ZdravaHrana.com</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body style="background-color: #e6ccb3 ">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #adebad; ">
+        <div class="container" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("ZdravaHrana.com", "Index", "Home", new { area = "" }, new { @class = "navbar-brand"})
+            </div>
+            <div class="navbar-collapse collapse"  style="font-weight:bold;">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Recepti", "Index", "Recept", null, new { id = "OT", style = "color: black" })</li>
+                    <li>@Html.ActionLink("Popis recepata", "Index", "PopisRecepata", null, new { id = "PT", style = "color: black" })</li>
+                    <li>@Html.ActionLink("Prehrana", "Index", "Prehrana", null, new { id = "RT", style = "color: black" })</li>
+                    <li>@Html.ActionLink("Omiljeni recepti", "Index", "Omiljeni", null, new { id = "ST", style = "color: black" })</li>
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ZdravaHrana.com</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

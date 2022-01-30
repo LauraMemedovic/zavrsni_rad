@@ -1,0 +1,118 @@
+﻿@model IEnumerable<aplikacija1.Models.Recept>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Recepti</h2>
+
+<table class="table" style="background-color: #adebad; padding: 5px; ">
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @if (item.Naziv == "Tjestenina s brokulom")
+            {
+                <img src="https://gastro.24sata.hr/media/img/95/a4/ca5f7ea69168365d64b2.jpeg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Tjestenina s brokulom</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 20 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Low carb krekeri")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/krekeri-low-carb.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Low-carb krekeri</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: jednostavno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 35 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+
+            }
+            @if (item.Naziv == "Smoothie od đumbira")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/zeleni1.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Smoothie od đumbira</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: jednostavno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 5 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Rižoto sa škampima")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/riza31.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Rižoto sa škampima</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 30 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Raffaello kuglice")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/kuglice1500.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Raffaello kuglice</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: jednostavno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 15 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Pita od sira")
+            {
+                <img src="https://gastro.24sata.hr/media/img/e1/23/99b6b259e0e84fae0185.jpeg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Pita od sira</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 60 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Piletina s mozzarellom")
+            {
+                <img src="https://www.thespruceeats.com/thmb/V7ieKcPt2R3brmEukNn4BCHX6AM=/3867x2175/smart/filters:no_upscale()/basic-baked-chicken-breasts-3050929-hero-01-c2b17bf655c24182a30a201c212ccde0.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Piletina s mozzarellom</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 50 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Zapečene punjene paprike")
+            {
+                <img src="https://d17zv3ray5yxvp.cloudfront.net/variants/E6b7NNk1du3F5mi1Jov6nJx5/10e16fef6290277e7993e10c0256471c38454474481d713b7348d884c2ac6a7f" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Zapečene punjene paprike</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 50 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Kokos čokoladne kocke")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/DSC_4400-1500.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Kokos čokoladne kocke</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 30 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Rolice od tikvica")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/f14b4490-1308-4282-8062-19fc01b8bfb6.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Rolice od tikvica</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 30 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Domaći kruh s chia sjemenkama")
+            {
+                <img src="https://www.fitness.com.hr/images/articles/kruhchia01.jpg" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Domaći kruh s chia sjemenkama</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 50 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+            @if (item.Naziv == "Piletina punjena špinatom")
+            {
+                <img src="https://images.eatthismuch.com/site_media/img/254530_ldementhon_f42947b8-fea4-4a1e-97f8-e778028a7b89.png" style="width:500px;height:300px;float:left" />
+                <p style="text-align:center; font-size:large;font-weight:bold">Piletina punjena špinatom</p> <br />
+                <p style="font-size:medium; text-align:center">Složenost: zahtjevno</p><br />
+                <p style="font-size:medium;text-align:center">Vrijeme pripreme: 45 minuta</p> <br />
+                <p style="text-align:center;font-size:medium">@Html.ActionLink("Detalji", "Details", new { id = item.ID })</p>
+            }
+        </td>
+
+    </tr>
+}
+    
+</table>
